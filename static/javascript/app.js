@@ -10,5 +10,21 @@
   var VideoFrameCollection = Backbone.Collection.extend({
     model: VideoFrame
   });
-  /* Initialization */
+
+  (function() {
+    /* Initialization */
+    var video = $('iframe');
+    $(document).bind('click', function() {
+      if (video.css('left').replace(/[^-\d\.]/g, '') == 0) {
+          video.animate({
+          left: '500px'
+        }, 5000);
+      }
+      else {
+        video.animate({
+          left: '0px'
+        }, 5000); 
+      }
+    });
+  })()
 })()
