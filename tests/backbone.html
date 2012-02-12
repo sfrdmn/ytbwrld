@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		iframe {
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript" src="../static/javascript/jquery-1.7.1.js"></script>
+</head>
+<body>
+	<iframe width="200" height="175" src="http://www.youtube.com/embed/Gv9dA06E1sc" frameborder="0" allowfullscreen></iframe>
+</body>
+<script type="text/javascript">
+	var video = $('iframe');
+	console.log(video);
+	$(document).bind('click', function() {
+		if (video.css('left').replace(/[^-\d\.]/g, '') == 0) {
+				video.animate({
+				left: '500px'
+			}, 5000);
+		}
+		else {
+			video.animate({
+				left: '0px'
+			}, 5000);	
+		}
+	});
+</script>
+</html>
