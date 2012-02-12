@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>a poem</title>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, details, figcaption, figure, footer, header,
+  hgroup, menu, nav, section { display: block; }
+
+  body {
+    background: #000;
+  }
+
+  .cntr {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 60px;
+    position: relative;
+    background: #000 url(img/stars.gif) repeat 0 0;
+  }
+
+  .bg,
+  .darkness {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    background: url(img/bg_1.png) no-repeat 0 0;
+    background-color: #e8e59b;
+
+    -webkit-transition: background-color 2.5s linear;
+    -moz-transition: background-color 2.5s linear;
+  }
+
+  .bg:hover {
+    background-color: transparent;
+  }
+
+  .darkness {
+    z-index: 3;
+    background-image: none;
+    background-color: rgba(0,0,0,.4);
+  }
+
+  .darkness:hover {
+    background-color: rgba(0,0,0,0);
+  }
+
+
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="cntr">
+    <div class="bg"></div>
+    <!--<div class="darkness"></div>-->
+  </div>
+
+</body>
+</html>
